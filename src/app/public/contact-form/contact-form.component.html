@@ -1,9 +1,9 @@
 <div id="title-formulario" class="font-indie">
-  <h2 id="title-formulario">Quer falar conosco?</h2>
+  <h2 id="title-formulario">Quieres hablar conmigo?</h2>
 </div>
 
 <form class="form font-nav" [formGroup]="contactForm" (ngSubmit)="submitForm()">
-  <label for="name">Nome:</label>
+  <label for="name">Nombre:</label>
   <input
     type="text"
     id="name"
@@ -16,10 +16,10 @@
     *ngIf="isSubmitted && contactForm.get('name')?.hasError('required')"
     class="error-message"
   >
-    O nome é obrigatório.
+    El nombre es obligatorio.
   </div>
 
-  <label for="email">Email:</label>
+  <label for="email">Correo:</label>
   <input
     type="email"
     id="email"
@@ -31,16 +31,16 @@
     *ngIf="isSubmitted && contactForm.get('email')?.hasError('required')"
     class="error-message"
   >
-    O email é obrigatório.
+    El correo is obligatorio.
   </div>
   <div
     *ngIf="isSubmitted && contactForm.get('email')?.hasError('email')"
     class="error-message"
   >
-    O email não é válido.
+    El correo no es válido
   </div>
 
-  <label for="message">Mensajem:</label>
+  <label for="message">Mensaje:</label>
   <textarea
     id="message"
     rows="8"
@@ -52,11 +52,11 @@
     *ngIf="isSubmitted && contactForm.get('message')?.hasError('required')"
     class="error-message"
   >
-    O message é obrigatório.
+    El mensaje es Obligatorio
   </div>
 
   <div class="alert alert-success" *ngIf="showSuccessNotify" role="alert">
-    <strong>Bom trabalho!</strong> Seu mensagem foi enviado com sucesso para a igreja.
+    <strong>Bien Hecho!</strong> Su mensaje fue enviado exitosamente.
  </div>
 
   <div class="center-content">
@@ -71,7 +71,7 @@
           type="button"></span>
     </label>
     <span class="text-checkmark" id="mostrarAviso"
-        >Aceitar os <a target="_blank" href="/terms">termos e condições</a> de processamento de dados</span
+        >Aceptar los <a target="_blank" href="/terms">terminos y condiciones</a> de procesamiento de datos</span
       >
   </div>
   
@@ -80,7 +80,7 @@
   *ngIf="isSubmitted && contactForm.get('checkmark')?.invalid"
   class="error-message check-error-message"
 >
-deve aceitar os Termos e Condições
+Debe aceptar los terminos y condiciones
 </div>
 
   <div class="button-enviar">
