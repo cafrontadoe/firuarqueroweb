@@ -1,4 +1,4 @@
-<mat-sidenav-container >
+<mat-sidenav-container>
   <!-- Mobile -->
   <mat-sidenav #sidenav mode="over" class="sidenav-movile">
     <div class="container-logo-mobile">
@@ -15,7 +15,8 @@
         routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >Conóceme</a>
+        >Conóceme</a
+      >
       <a
         class="font-nav"
         routerLink="/quem-somos"
@@ -23,27 +24,26 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Contacto
       </a>
-      <!-- <a
+      <a
         class="font-nav"
-        routerLink="/gallery"
+        routerLink="/predicas"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >Galería</a
-      > -->
-      <a class="font-nav" 
-      routerLink="/donations"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-        >Donaciones </a>
-      
+        >Mi Canción</a
+      >
+      <a
+        class="font-nav"
+        routerLink="/donations"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Donaciones
+      </a>
     </nav>
   </mat-sidenav>
 
   <!-- web -->
   <mat-sidenav-content class="">
-    
     <mat-toolbar id="navBar" class="position-relative">
-
       <header style="display: block">
         <article class="logo-container z-index-1">
           <img
@@ -51,12 +51,20 @@
             style="max-width: 100%; max-height: 100%"
             alt="image"
           />
+          <label
+      id="label-mobile-title"
+      class="color-gold position-absolute "
+      style="margin-top: 30px;"
+      >FIRU ARQUERO</label
+    >
         </article>
         <mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()"
           >menu</mat-icon
         >
 
-        <label id="label-mobile-title" class="color-gold position-absolute label-mobile-menu"
+        <label
+          id="label-mobile-title"
+          class="color-gold position-absolute label-mobile-menu"
           >FIRU ARQUERO OFICIAL</label
         >
 
@@ -66,7 +74,8 @@
             routerLink="/"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            >Conóceme</a>
+            >Conóceme</a
+          >
           <a
             class="font-nav"
             routerLink="/quem-somos"
@@ -74,20 +83,20 @@
             [routerLinkActiveOptions]="{ exact: true }"
             >Contacto
           </a>
-          <!-- <a
+          <a
             class="font-nav"
-            routerLink="/gallery"
+            routerLink="/predicas"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            >Galería</a
-          > -->
+            >Mi Canción</a
+          >
           <a
             class="font-nav z-index-1"
             routerLink="/donations"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
             >Donaciones</a
-              >
+          >
           <a routerLink="contact z-index-1" routerLinkActive="active">
             <mat-icon class="color-gold display-inline">home</mat-icon>
           </a>
@@ -97,8 +106,6 @@
     <section id="content">
       <router-outlet></router-outlet>
       <app-sociais></app-sociais>
-
     </section>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
